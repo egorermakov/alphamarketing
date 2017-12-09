@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="27px" viewBox="0 0 40 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Email</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-299.000000, -5623.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="contacts" transform="translate(0.000000, 5275.000000)">
+                <g id="Group-2" transform="translate(171.000000, 327.000000)">
+                    <g id="Email" transform="translate(128.000000, 21.000000)">
+                        <g id="Group">
+                            <g id="_x37_7_Essential_Icons" transform="translate(0.495741, 0.508758)">
+                                <path d="M37.9022222,0 L0.971851852,0 C0.437333333,0 0,0.436705882 0,0.970457516 L0,25.2318954 C0,25.7656471 0.437333333,26.2023529 0.971851852,26.2023529 L37.9022222,26.2023529 C38.4367407,26.2023529 38.8740741,25.7656471 38.8740741,25.2318954 L38.8740741,0.970457516 C38.8740741,0.436705882 38.4367407,0 37.9022222,0 Z M35.5697778,1.94091503 L19.437037,18.0505098 L3.3042963,1.94091503 L35.5697778,1.94091503 Z M1.9437037,3.29955556 L11.7594074,13.1011765 L1.9437037,22.9027974 L1.9437037,3.29955556 Z M3.35288889,24.2614379 L13.12,14.5083399 L18.7567407,20.1369935 C19.1454815,20.5251765 19.7285926,20.5251765 20.1173333,20.1369935 L25.7540741,14.5083399 L35.5211852,24.2614379 L3.35288889,24.2614379 Z M36.9303704,22.9027974 L27.1146667,13.1011765 L36.9303704,3.29955556 L36.9303704,22.9027974 Z" id="Email"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
