@@ -26,40 +26,36 @@
 
     <!-- HEADER SECTION -->
     <header class="header">
-        <div class="topbar">
-            <div class="container">
-                <div class="row">
+       
+        <a class="header__logo" href="/">
+            <img src="img/logo.png" alt="" width="197" height="60">
+        </a>
+        
+        <nav class="header__menu">
+            <ul>
+                <li><a href="">Преимущества</a></li>
+                <li><a href="">Портфолио</a></li>
+                <li><a href="">Цена</a></li>
+                <li><a href="">Схема работы</a></li>
+                <li><a href="">Другие услуги</a></li>
+                <li><a href="">Контакты</a></li>
 
-                    <!-- LOGO -->
-                    <div class="col-md-3 logo">
-                        <a href="/">
-                            <img src="img/logo.png" alt="" width="197" height="60">
-                        </a>
-                    </div>
-                    <!-- /LOGO -->
+            </ul>
+        </nav>
 
-                    <!-- MENU -->
-                    <div class="col-md-5 menu">
-                        <ul>
-                            <li><a href="">Разработка лендингов</a></li>
-                            <li><a href="">Контекстная реклама</a></li>
-                        </ul>
-                    </div>
-                    <!-- /MENU -->
-                    
-                    <div class="col-md-4">
-                       <div class="phone">
-                           <a href=""><span>+7 499</span> 959-05-99</a>
-                       </div>
-                        <div class="social">
-                            <a href=""><img src="img/facebook.svg" width="36" height="36" alt="Facebook"></a>
-                            <a href=""><img src="img/vk.svg" width="36" height="36" alt="Вконтакте"></a>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="header__contacts">
+           
+            <a class="phone" href="tel:"><span>+7 499</span> 959-05-99</a>
+            
+            <div class="social">
+                <a href=""><img src="img/facebook.svg" width="36" height="36" alt="Facebook"></a>
+                <a href=""><img src="img/vk.svg" width="36" height="36" alt="Вконтакте"></a>
             </div>
+            
         </div>
+        
+         <a class="touch-menu" href="#"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+        
     </header>
     <!-- /HEADER SECTION -->
 
@@ -88,10 +84,10 @@
                               <input type="hidden" name="_next" value="//alphamarketing.ru" />
                                <div class="row">
                                    <div class="col-md-12">
-                                       <input type="text" name="name" placeholder="Введите ваше имя">
+                                       <input type="text" name="name" placeholder="Введите ваше имя" required>
                                    </div>
                                    <div class="col-md-12">
-                                       <input type="email" name="_replyto" placeholder="Введите ваш e-mail">
+                                       <input type="email" name="_replyto" placeholder="Введите ваш e-mail" required>
                                    </div>
                                    <div class="col-md-12">
                                        <button type="submit">Получить консультацию</button>
@@ -578,6 +574,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var touch = $('.touch-menu');
+            var menu = $('.header__menu');
+            
+            $(touch).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function(){
+                var wid = $(window).width();
+                if(wid > 760 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
