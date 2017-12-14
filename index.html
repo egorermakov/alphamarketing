@@ -33,12 +33,12 @@
         
         <nav class="header__menu">
             <ul>
-                <li><a href="">Преимущества</a></li>
-                <li><a href="">Портфолио</a></li>
-                <li><a href="">Цена</a></li>
-                <li><a href="">Схема работы</a></li>
-                <li><a href="">Другие услуги</a></li>
-                <li><a href="">Контакты</a></li>
+                <li><a href="#advantages">Преимущества</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#price">Цена</a></li>
+                <li><a href="#scheme">Схема работы</a></li>
+                <li><a href="#direct">Другие услуги</a></li>
+                <li><a href="#contacts">Контакты</a></li>
 
             </ul>
         </nav>
@@ -101,12 +101,12 @@
             </div>
         </div>
 
-        <a class="offer-down" href=""></a>
+        <a class="offer-down" href="#advantages"></a>
 
     </section>
     <!-- OFFER -->
 
-    <section class="advantages text-center">
+    <section id="advantages" class="advantages text-center">
        
         <div class="container">
            
@@ -172,7 +172,7 @@
 
     </section>
     
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container-fluid">
 
             <div class="section-header">
@@ -263,7 +263,7 @@
         </div>
     </section>
     
-    <section class="pricing-tables">
+    <section id="price" class="pricing-tables">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-header__title section-header__title_portfolio">Стоимость посадочной страницы</h2>
@@ -349,7 +349,7 @@
     </section>
     
         
-    <section class="scheme">
+    <section id="scheme" class="scheme">
         <div class="container">
             
             <div class="section-header">
@@ -495,7 +495,7 @@
 
     </section>
     
-    <section class="contacts-wrap">
+    <section id="contacts" class="contacts-wrap">
         <div class="container">
             
             <div class="section-header">
@@ -588,6 +588,36 @@
                 if(wid > 760 && menu.is(':hidden')) {
                     menu.removeAttr('style');
                 }
+            });
+        });
+        
+        $(function() {
+            //caches a jQuery object containing the header element
+            var header = $(".header");
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 500) {
+                    header.addClass("header-sticky");
+                } else {
+                    header.removeClass("header-sticky");
+                }
+            });
+        });
+        
+        //Smoothscroll & Scroll to anchor minus set amount (72) of pixels
+        $(function(){
+            $('a[href^="#"]').on('click',function (e) {
+                e.preventDefault();
+
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 102
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
             });
         });
     </script>
